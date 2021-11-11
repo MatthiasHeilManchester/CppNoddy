@@ -116,6 +116,11 @@ int main(int argc, char* argv[])
  // Store command line arguments
  CommandLineArgs::setup(argc,argv);
 
+ // Dummy
+ unsigned n_threads=1;
+ CommandLineArgs::specify_command_line_flag("-omp_num_threads",
+                                            &n_threads);
+
  // Number of nodes in y direction
  CommandLineArgs::specify_command_line_flag("--nnod_y",
                                             &Parameters::Nnod_y);
@@ -379,7 +384,8 @@ int main(int argc, char* argv[])
    }
   outfile.close();
 
-  
+  // Dummy pass
+  cout << "\033[1;32;48m  * PASSED \033[0m\n";
   return 0;
-  
+
 }
