@@ -41,6 +41,13 @@ exe = executable('EVPOrrSommerfeld_lapack', 'EVPOrrSommerfeld_lapack.cpp',
     link_with : CppNoddy )
 test('EVPOrrSommerfeld_lapack', exe, timeout : 180)
 
+
+exe = executable('EVPOrrSommerfeld_lapack_morten', 'EVPOrrSommerfeld_lapack_morten.cpp',
+    include_directories : inc,
+    link_with : CppNoddy )
+test('EVPOrrSommerfeld_lapack_morten', exe, timeout : 180)
+
+
 exe = executable('EVPOrrSommerfeldEasy_lapack', 'EVPOrrSommerfeld_lapack.cpp',
     include_directories : inc,
     link_with : CppNoddy )
